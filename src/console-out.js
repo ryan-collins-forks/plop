@@ -12,7 +12,7 @@ module.exports = (function () {
 			prompts: [{
 				type: 'list',
 				name: 'generator',
-				message: '[PLOP]'.blue + ' Please choose a generator.',
+				message: '[GROMMET]'.blue + ' Please choose a generator.',
 				choices: plopList.map(function (p) {
 					return {
 						name: p.name + chalk.gray(!!p.description ? ' - ' + p.description : ''),
