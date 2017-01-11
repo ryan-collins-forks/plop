@@ -14,7 +14,7 @@ var globalPkg = require('../package.json');
 var generator = argv._.join(' ') || null;
 
 var Plop = new Liftoff({
-	name: 'grommet',
+	name: 'plop',
 	extensions: interpret.jsVariants,
 	v8flags: v8flags
 });
@@ -61,7 +61,7 @@ function run(env) {
 	plopfilePath = env.configPath;
 	// abort if there's no plopfile found
 	if (plopfilePath == null) {
-		console.error(chalk.red('[PLOP] ') + 'No plopfile found');
+		console.error(chalk.red('[GROMMET] ') + 'No config file found');
 		out.displayHelpScreen();
 		process.exit(1);
 	}
@@ -76,7 +76,7 @@ function run(env) {
 	} else if (generators.map(function (v) { return v.name; }).indexOf(generator) > -1) {
 		doThePlop(plop.getGenerator(generator));
 	} else {
-		console.error(chalk.red('[PLOP] ') + 'Generator "' + generator + '" not found in plopfile');
+		console.error(chalk.red('[GROMMET] ') + 'Generator "' + generator + '" not found in grommet / plop config file');
 		process.exit(1);
 	}
 
