@@ -14,7 +14,7 @@ var globalPkg = require('../package.json');
 var generator = argv._.join(' ') || null;
 
 var Plop = new Liftoff({
-	name: 'plop',
+	name: 'grommet',
 	extensions: interpret.jsVariants,
 	v8flags: v8flags
 });
